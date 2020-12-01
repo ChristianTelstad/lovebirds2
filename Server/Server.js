@@ -2,7 +2,7 @@
 const express = require('express')
 //initialiserer express-server
 const server = express()
-const port = 5501
+const port = 3000
 
 var path = require("path");
 
