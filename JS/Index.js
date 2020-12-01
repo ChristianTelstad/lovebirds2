@@ -39,14 +39,14 @@ const button = document.querySelector(".button");
 
 // Create a very simple class
 class User {
-    constructor(firstname, lastname, birthday, gender,email, password, ssn ){
+    constructor(firstname, lastname, birthday, gender,email, password, CPR){
         this.firstName = firstname;
         this.lastname = lastname;
         this.gender = gender;
         this.birthday = birthday;
         this.email = email;
         this.password = password;
-        this.ssn = ssn;
+        this.CPR = CPR;
     }
 }
 
