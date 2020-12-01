@@ -12,11 +12,11 @@ server.listen(port, () => {
 const path = require("path");
 
 server.use(express.static("Model"))
-server.use(express.static("view"))
+server.use(express.static("View"))
 
 server.get("/", function(req, res) {
   res.sendFile(path.join(__dirname + "/View/sign.html"))
-  res.sendFile(path.join(__dirname + "/View/signUp.html"));
+  res.sendFile(path.join(__dirname + "/View/signUp.html"))
 });
 
 
