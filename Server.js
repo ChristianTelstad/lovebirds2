@@ -12,6 +12,10 @@ server.get("/", function(req, res) {
   res.sendFile(path.join(__dirname + "/View/sign.html"));
 });
 
+server.get("/", function(req, res) {
+  res.sendFile(path.join(__dirname + "/View/signUp.html"));
+});
+
 //server aktiveres
 server.listen(port, () => {
     console.log(`Server-applikation lytter på http://localhost:${port}`)
