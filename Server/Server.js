@@ -7,8 +7,8 @@ const port = 3000
 var path = require("path");
 
 server.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname + "DATING/View/sign.html"));
-  res.sendFile(path.join(__dirname + "DATING/View/signUp.html"))
+  res.sendFile(path.join(__dirname + "../View/sign.html"));
+  res.sendFile(path.join(__dirname + "../View/signUp.html"))
 });
 
 //server aktiveres
