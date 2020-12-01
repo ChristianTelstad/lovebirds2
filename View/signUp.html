@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn </title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+
+    <!--Header:-->
+
+</head>
+
+<body>
+
+    <script src="Index.js"> </script>
+
+    <div class="login-box">
+      <h1>Sign Up</h1>
+
+      <div class="textbox">
+        <p>First Name:</p>
+        <input type="text">
+      </div>
+    
+      <div class="textbox">
+        <p>Last Name:</p>
+        <input type="text">
+      </div>
+
+      <div class="textbox">
+        <p>Email:</p>
+        <input type="text">
+      </div>
+
+      <div class="textbox">
+        <p>Username:</p>
+        <input type="text">
+      </div>
+
+      <div class="textbox">
+        <p>Password:</p>
+        <input type="password" id="password" name="password" oninput="validatePasswordLenght(); validatePasswordNumber(); validatePasswordUpperCase();">
+      </div>
+      
+      <div id = "feedback">
+        <div id = "passwordLenghtFeedback">
+            <i class="fas fa-times"></i> <span>Password must be longer than 8 characters</span>
+        </div>
+         <div id = "passwordNumberFeedback">
+             <i class="fas fa-times"></i> <span>Password must contain at least one number</span>
+        </div>
+        <div id = "passwordUpperCaseFeedback">
+             <i class="fas fa-times"> </i> <span>Password must contain at one upper case letter</span>
+        </div>
+       </div>
+    
+      <input type="button" class="btn" value="Sign up" onclick = "document.location='index.html'">
+
+      <p id = "signIn" onclick = "document.location='sign.html'">Back to sign in page</p>
+
+    </div>
+
+</body>
+
+</html>
