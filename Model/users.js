@@ -22,7 +22,7 @@ button.addEventListener("click", function(){
     let lastname = document.getElementById("lastname").value;
     let email = document.getElementById("email").value;
     let birthday = document.getElementById("birthday").value;
-    let ssn = document.getElementById("ssn").value;
+    let CPR = document.getElementById("CPR").value;
     let gender = document.getElementById("gender").value;
     let password = document.getElementById("password").value;
             
@@ -36,27 +36,27 @@ button.addEventListener("click", function(){
     /*if(regExForEmail.test(String(email).toLowerCase())){
         errorText += "Email is not valid\n";
     }*/
-    if(email == ""){
+    if(email == "") {
         errorText += "email plz"
     }
     if(birthday == "") {
         errorText += "Birthday is not valid or not in valid format\n";
     }
-    if(ssn == ""){
+    if(CPR == "") {
         errorText += "Please submit a CPR\n";
     }
-    if(gender == ""){
+    if(gender == "") {
         errorText += "You need to input a valid gender. Either female or male\n";
     }
-    if(password == ""){
+    if(password == "") {
         errorText += "Please submit password that is at least six chars \n";
     };
 
    // If we have errors we output them
-   if(errorText != ""){
+   if(errorText != "") {
     document.getElementById("message").innerText = errorText;
         }else {
-    let newUser = new User(firstname, lastname, birthday, gender, email, password, ssn);
+    let newUser = new User(firstname, lastname, birthday, gender, email, password, CPR);
     //denne funktion er på linje 138
     uploadUser(newUser)}
 });
