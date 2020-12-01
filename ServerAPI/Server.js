@@ -6,6 +6,10 @@ const port = 5501
 
 var path = require("path");
 
+server.get("/", function(req, res) {
+  res.sendFile(path.join(__dirname + "DATING/View/sign.html"));
+  res.sendFile(path.join(__dirname + "DATING/View/signUp.html"))
+});
 
 //server aktiveres
 server.listen(port, () => {
