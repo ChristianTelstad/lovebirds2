@@ -4,20 +4,20 @@ const express = require('express')
 const server = express()
 const port = 3000
 
+//server aktiveres
+server.listen(port, () => {
+  console.log(`Server-applikation lytter på http://localhost:${port}`)
+})
+
 const path = require("path");
-
-
 
 server.get("/", function(req, res) {
   res.sendFile(path.join(__dirname + "/View/sign.html"));
 });
 
-server.get("/", function(req, res) {
+server.get("/signUp", function(req, res) {
   res.sendFile(path.join(__dirname + "/View/signUp.html"));
 });
 
-//server aktiveres
-server.listen(port, () => {
-    console.log(`Server-applikation lytter på http://localhost:${port}`)
-  })
+
 
