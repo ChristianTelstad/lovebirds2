@@ -13,6 +13,6 @@ server.get("/", function(req, res) {
 
 //server aktiveres
 server.listen(port, () => {
-  console.log(`Server-applikation lytter på http://localhost:${port}`)
+  console.log("Server-applikation lytter på http://localhost:${port}")
 })
 
