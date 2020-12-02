@@ -20,6 +20,21 @@ server.get("/", function(req, res) {
 });
 
 
+const mongoose = require("mongoose");
+
+server.get("/", (req, res) => {
+    res.send("Hello");
+})
+
+server.get("/post", (req, res) => {
+    res.send("Hello, we are on post");
+})
+
+mongoose.connect('mongodb+srv://ChristianTelstad:Svinndal1@cluster0.oiiky.mongodb.net/test', () => console.log('connected to DB!'))
+
+server.listen(4000)
+
+
 
 
 
