@@ -35,6 +35,8 @@ const storageInput = document.querySelector(".storage");
 const text = document.querySelector(".text");
 const button = document.querySelector(".button");
 
+//localStorage.setItem("test", "hest")
+
 function uploadfile(){
     var xhttp = new XMLHttpRequest();
     var file = document.getElementById('file')
