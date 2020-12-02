@@ -32,7 +32,7 @@ server.get("/post", (req, res) => {
 
 mongoose.connect('mongodb+srv://ChristianTelstad:Svinndal1@cluster0.oiiky.mongodb.net/test', () => console.log('connected to DB!'))
 
-server.listen(4000)
+server.listen(3000)
 
 
 
