@@ -20,7 +20,6 @@ function validatePasswordNumber() {
     }  
 }
 
-
 function validatePasswordUpperCase() {
 
     if (/[A-Z]/.test(password.value)) {
@@ -35,3 +34,4 @@ function validatePasswordUpperCase() {
 const storageInput = document.querySelector(".storage");
 const text = document.querySelector(".text");
 const button = document.querySelector(".button");
+
