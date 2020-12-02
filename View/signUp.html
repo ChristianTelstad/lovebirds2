@@ -13,28 +13,56 @@
 
 <body>
 
-    <script src="/JS/Index.js"> </script>
-    
+    <script src="Index.js"> </script>
 
-  <form>
-      <p> Opret bruger </p>
-      <br> <input type="text" id="firstname" placeholder="Firstname"> </br>
-      <br> <input type="text" id="lastname" placeholder="Lastname"> </br>
-      <br> <input type="email" id="email" placeholder="Email"> </br>
-      <br> <input type="date" id="birthday" placeholder="Birthday"> </br>
-      <br> <input type="text" id="CPR" placeholder="CPR"> </br>
-      <br> <input type="text" id="gender" placeholder="Gender"> </br>
-      <br> <input type="password" id="password" placeholder="Password" oninput="validatePasswordLenght(); validatePasswordNumber(); validatePasswordUpperCase();"> </br>
-      <br> <input type="button" value="Submit" id="submit"> </br>
-      <br> <form id="fileform"> </br>
-          <input type="file" value="file" id="file" name="file" onchange="uploadFile()">
-      </form>
-  </form>
-      <!--Note til mig sel: Se Thomas' svar-->
-    
-      <input type="submit" class="btn" value="Sign up" onclick = "document.location='account.html'">
+    <body>
+
+      <div class="login-box">
+        <h1>Sign Up</h1>
   
-      <br> <p id = "signIn" onclick = "document.location='sign.html'">Back to Log In page</p> </br>
+  
+        <div class="textbox">
+          <p>First Name:</p>
+          <input type="text">
+        </div>
+      
+        <div class="textbox">
+          <p>Last Name:</p>
+          <input type="text">
+        </div>
+  
+        <div class="textbox">
+          <p>Email:</p>
+          <input type="text">
+        </div>
+  
+        <div class="textbox">
+          <p>Username:</p>
+          <input type="text">
+        </div>
+  
+        <div class="textbox">
+          <p>Password:</p>
+          <input type="password" id="password" name="password" oninput="validatePasswordLenght(); validatePasswordNumber(); validatePasswordUpperCase();">
+        </div>
+        
+        <div id = "feedback">
+          <div id = "passwordLenghtFeedback">
+              <i class="fas fa-times"></i> <span>Password must be longer than 8 characters</span>
+          </div>
+           <div id = "passwordNumberFeedback">
+               <i class="fas fa-times"></i> <span>Password must contain at least one number</span>
+          </div>
+          <div id = "passwordUpperCaseFeedback">
+               <i class="fas fa-times"> </i> <span>Password must contain at one upper case letter</span>
+          </div>
+        </div>
+
+        <input type="button" class="btn" value="Sign up" onclick = "document.location='account.html'">
+
+      <p id = "signIn" onclick = "document.location='sign.html'">Back to sign in page</p>
+
+    
 
     </div>
 
