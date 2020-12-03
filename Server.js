@@ -1,18 +1,21 @@
 import express from "express";
 import fs from "fs";
+import path from "path";
 
 //initialiserer express-server
 const server = express();
 const port = 3000;
 
-const path = require("path");
+var users = [];
 
 //Path til HTML
 server.use(express.static("Model"))
 server.use(express.static("View"))
+server.use(express.json());
+server.use(express.urlencoded({extended: true}));
 
 server.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname + "/View/sign.html"))
+  res.sendFile(path.join(path.resolve() + "/View/sign.html"))
 });
 
 //server aktiveres
@@ -20,10 +23,6 @@ server.listen(port, () => {
   console.log(`Server-applikation lytter på http://localhost:${port}`)
 });
 
-var users = [];
-
-server.use(express.json());
-server.use(express.urlencoded({extended: true}));
 
 server.get("/users", (req, res) => {
   fs.readFile('./users.json', "utf8", (err, data) => {
