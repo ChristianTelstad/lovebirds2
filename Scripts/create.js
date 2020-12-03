@@ -24,6 +24,8 @@ document.addEventListener("DOMContentLoaded", function() {
     
     //.onclick = function () { alert('hello!'); };
     
+    submitButton.addEventListener("click", submitfunction);
+    
     function submitfunction (){
     var firstname = firstnameinput.value;
     var lastname = lastnameinput.value;
@@ -32,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var gender = genderinput.value;
     var password = passwordinput.value;
 
-    submitButton.addEventListener("click", submitfunction);
+    
     
     // var user= new User(username, birthday, gender, email, password);
         
