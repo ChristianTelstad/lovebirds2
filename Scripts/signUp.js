@@ -11,11 +11,10 @@ class User {
     }
 }
 
-
 document.addEventListener("DOMContentLoaded", function() {
 
 
-    var submitbutton = document.getElementById("apiButton");
+    var apibutton = document.getElementById("apiButton").onclick = function() {uploadUser};
     var firstNameinput = document.getElementById("firstName");
     var lastNameinput = document.getElementById("lastName");
     var birthdayinput = document.getElementById("birthday");
@@ -23,22 +22,24 @@ document.addEventListener("DOMContentLoaded", function() {
     var genderinput = document.getElementById("gender");
     var passwordinput = document.getElementById("password");
     
-    submitbutton.addEventListener ("click", submitfunction);
+    apibutton.addEventListener ("click", apifunction);
+
+    //.onclick = function () { alert('hello!'); };
     
-    function submitfunction(){
+    function apifunction(){
     var firstName = firstNameinput.value;
     var lastName = lastNameinput.value;
-    var birthday= birthdayinput.value;
-    var email= emailinput.value;
-    var gender= genderinput.value;
-    var password= passwordinput.value;
+    var birthday = birthdayinput.value;
+    var email = emailinput.value;
+    var gender = genderinput.value;
+    var password = passwordinput.value;
     
     // var user= new User(username, birthday, gender, email, password);
         
     // hardcoder ny user ud fra model-klasse
-    let user = new User(1, firstName, lastName, birthday, email, gender, password);
+    let user = new User(1, firstName, lastName, gender, birthday, email, password);
     
-     console.log("hej"); 
+     console.log("User Uploaded"); 
      uploadUser(user)
     }
     });
@@ -46,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function uploadUser(user){
     
         //Laver en fetch, see https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
-    fetch('http://localhost:3001/createUser', {
+    fetch('http://localhost:3000/createUser', {
       method: 'POST', // or 'PUT'
       headers: {
         'Content-Type': 'application/json',
