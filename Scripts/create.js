@@ -34,11 +34,8 @@ document.addEventListener("DOMContentLoaded", function() {
     var gender = genderinput.value;
     var password = passwordinput.value;
 
-    
-    
-    // var user= new User(username, birthday, gender, email, password);
         
-    // hardcoder ny user ud fra model-klasse
+    //hardcoder ny user ud fra model-klasse
 
     let user = new User(1, firstname, lastname, gender, birthday, email, password);
     
