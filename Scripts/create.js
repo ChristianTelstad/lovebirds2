@@ -1,12 +1,13 @@
 
 class User {
-  constructor(id, firstname, lastname, birthday, email, gender, password){
+  constructor(id, firstname, lastname, birthday, email, gender, interest, password){
       this.id = id;
       this.firstName = firstname;
       this.lastname = lastname;
       this.birthday = birthday;
       this.email = email;
       this.gender = gender;
+      this.interest = interest;
       this.password = password;
   }
 }
@@ -14,12 +15,13 @@ class User {
 document.addEventListener("DOMContentLoaded", function() {
 
 
-    var submitbutton = document.getElementById("submitbutton");
+    var submitButton = document.getElementById("submitbutton");
     var firstnameinput = document.getElementById("firstname");
     var lastnameinput = document.getElementById("lastname");
     var birthdayinput = document.getElementById("birthday");
     var emailinput = document.getElementById("email");
     var genderinput = document.getElementById("gender");
+    var interest = document.getElementById("interest");
     var passwordinput = document.getElementById("password");
     
     //.onclick = function () { alert('hello!'); };
@@ -32,12 +34,13 @@ document.addEventListener("DOMContentLoaded", function() {
     var birthday = birthdayinput.value;
     var email = emailinput.value;
     var gender = genderinput.value;
+    var interest = interestinput.value;
     var password = passwordinput.value;
 
         
     //hardcoder ny user ud fra model-klasse
 
-    let user = new User(1, firstname, lastname, gender, birthday, email, password);
+    let user = new User(1, firstname, lastname, birthday, email,  gender, interest, password);
     
      console.log("User Uploaded"); 
      uploadUser(user)

@@ -18,11 +18,6 @@ server.get("/", function(req, res) {
   res.sendFile(path.join(path.resolve() + "/View/signup.html"))
 });
 
-//server aktiveres
-server.listen(port, () => {
-  console.log(`Server-applikation lytter på http://localhost:${port}`)
-});
-
 
 server.get("/users", (req, res) => {
   fs.readFile('./users.json', "utf8", (err, data) => {
@@ -58,16 +53,24 @@ server.post("/createUser", (req, res) => {
 server.delete("/deleteUser/:id", (req, res) => {
   fs.readFile('./users.json', "utf8", (err, data) => {
     users = JSON.parse(data);
-    req.body.id = users.length + 1;
-    users.push(req.body);
-    var jsonData = JSON.stringify(users);
+    var deleteindex = users.findIndex((user) => user.id==+ req.params.id)
+    console.log(deleteindex)
+    if(deleteindex > 0) {
+      users.splice(deleteindex, 1)
+      var jsonData = JSON.stringify(users)
       fs.writeFile("users.json", jsonData, function (err) {
         if (err) {
           console.log(err);
         }
       });
       res.sendStatus(200);
+    }
   });
+});
+
+//server aktiveres
+server.listen(port, () => {
+  console.log(`Server-applikation lytter på http://localhost:${port}`)
 });
 
 

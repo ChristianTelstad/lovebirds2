@@ -13,7 +13,9 @@
 
 <body>
 
-      <div class="login-box">
+      <script src="create.js"> </script>
+
+      <div class="login-box"> </div>
         <h1>Sign Up</h1>
   
         <div class="textbox">
@@ -37,14 +39,24 @@
         </div>
 
         <br>
+        <p> Gender </p>
         <div class="textbox">
           <input type="Radio" value="Male" id="gender"> Male
           <input type="Radio" value="Female" id="gender"> Female
         </div>
+
+        <br>
+        <p> Interesse</p>
+        <div> 
+          <input type="Radio" id="interest"> Male
+          <input type="Radio" id="interest"> Female
+          <input type="Radio" id="interest"> Both
+          
+        </div>
   
         <div class="textbox">
           <p>Password:</p>
-          <input type="password" id="password" value="password">
+          <input type="password" id="password">
         </div>
         <!--oninput="validatePasswordLenght(); validatePasswordNumber(); validatePasswordUpperCase();">-->
         <!--<div id = "feedback">
@@ -61,9 +73,9 @@
 
         <br>
 
-      <input type="button" type="submit" value="Sign up" id="submitButton"> </input>
+      <button type="button" type="submit" value="submit" id="submitButton"> SIGN UP </button> 
 
-      <input type="button" type="submit" value="Back to log in" id="signIn" onclick="document.location='sign.html'" onclick=""> </input>
+      <button type="button" type="submit" value="submit" id="signIn" onclick="document.location='sign.html'" onclick=""> BACK TO LOGIN </button>
 
     </div>
 
