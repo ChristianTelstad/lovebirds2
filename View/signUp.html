@@ -13,7 +13,7 @@
 
 <body>
 
-  <script src="Scripts/signup.js"> </script>
+  <script src="createuser.js"> </script>
 
       <div class="login-box">
         <h1>Sign Up</h1>
@@ -50,7 +50,7 @@
           <input type="password" id="password" value="password">
         </div>
         <!--oninput="validatePasswordLenght(); validatePasswordNumber(); validatePasswordUpperCase();">-->
-        <div id = "feedback">
+        <!--<div id = "feedback">
           <div id = "passwordLenghtFeedback">
               <i class="fas fa-times"></i> <span>Password must be longer than 8 characters</span>
           </div>
@@ -60,11 +60,13 @@
           <div id = "passwordUpperCaseFeedback">
                <i class="fas fa-times"> </i> <span>Password must contain at one upper case letter</span>
           </div>
-        </div>
+        </div>-->
 
-        <input type="button" class="btn" id="apiButton" value="Sign up" onclick="apiButton()">
+        <br>
 
-      <input type="button" value="Back to log in" id="signIn" onclick="document.location='sign.html'"> </input>
+      <button type="button" value="Sign up" id="apiButton" value="Sign up" </button>
+
+      <button type="button" value="Back to log in" id="signIn" onclick="document.location='sign.html'" onclick=""> BACK TO LOG IN SITE </button>
 
     </div>
 

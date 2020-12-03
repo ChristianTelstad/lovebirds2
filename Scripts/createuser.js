@@ -22,8 +22,6 @@ document.addEventListener("DOMContentLoaded", function() {
     var genderinput = document.getElementById("gender");
     var passwordinput = document.getElementById("password");
     
-    apibutton.addEventListener ("click", apifunction);
-
     //.onclick = function () { alert('hello!'); };
     
     function apifunction(){
@@ -33,6 +31,8 @@ document.addEventListener("DOMContentLoaded", function() {
     var email = emailinput.value;
     var gender = genderinput.value;
     var password = passwordinput.value;
+
+    apibutton.addEventListener("click", apifunction);
     
     // var user= new User(username, birthday, gender, email, password);
         
@@ -60,19 +60,6 @@ document.addEventListener("DOMContentLoaded", function() {
       console.log(error)
     })
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
