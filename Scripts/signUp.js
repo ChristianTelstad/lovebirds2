@@ -14,7 +14,7 @@ class User {
 document.addEventListener("DOMContentLoaded", function() {
 
 
-    var apibutton = document.getElementById("apiButton").onclick = function() {uploadUser};
+    var apibutton = document.getElementById("apiButton");
     var firstNameinput = document.getElementById("firstName");
     var lastNameinput = document.getElementById("lastName");
     var birthdayinput = document.getElementById("birthday");

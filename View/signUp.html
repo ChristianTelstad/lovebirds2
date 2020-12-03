@@ -11,10 +11,9 @@
 </head>
 
 
-  <body>
+<body>
 
-      <script src="Index.js"> </script>
-      <script src="signUp.js"> </script>
+  <script src="Scripts/signup.js"> </script>
 
       <div class="login-box">
         <h1>Sign Up</h1>
@@ -48,9 +47,9 @@
   
         <div class="textbox">
           <p>Password:</p>
-          <input type="password" id="password" name="password" oninput="validatePasswordLenght(); validatePasswordNumber(); validatePasswordUpperCase();">
+          <input type="password" id="password" value="password">
         </div>
-        
+        <!--oninput="validatePasswordLenght(); validatePasswordNumber(); validatePasswordUpperCase();">-->
         <div id = "feedback">
           <div id = "passwordLenghtFeedback">
               <i class="fas fa-times"></i> <span>Password must be longer than 8 characters</span>
@@ -63,7 +62,7 @@
           </div>
         </div>
 
-        <input type="button" class="btn" id="apiButton" value="Sign up" onclick="apibutton();",document.location='account.html'">
+        <input type="button" class="btn" id="apiButton" value="Sign up" onclick="apiButton()">
 
       <input type="button" value="Back to log in" id="signIn" onclick="document.location='sign.html'"> </input>
 
