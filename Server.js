@@ -1,6 +1,7 @@
 import express from "express";
 import fs from "fs";
 import path from "path";
+import cors from "cors";
 
 //initialiserer express-server
 const server = express();
@@ -9,15 +10,15 @@ const port = 3000;
 var users = [];
 
 //Path til HTML
-server.use(express.static("Model"))
-server.use(express.static("View"))
+server.use(express.static("Model"));
+server.use(express.static("View"));
 server.use(express.json());
 server.use(express.urlencoded({extended: true}));
+server.use(cors());
 
 server.get("/", function(req, res) {
   res.sendFile(path.join(path.resolve() + "/View/signup.html"))
 });
-
 
 server.get("/users", (req, res) => {
   fs.readFile('./users.json', "utf8", (err, data) => {
@@ -41,7 +42,7 @@ server.post("/createUser", (req, res) => {
     req.body.id = users.length + 1;
     users.push(req.body);
     var jsonData = JSON.stringify(users);
-      fs.writeFile("users.json", jsonData, function (err) {
+      fs.writeFile("./users.json", jsonData, function (err) {
         if (err) {
           console.log(err);
         }

@@ -15,7 +15,7 @@ class User {
 document.addEventListener("DOMContentLoaded", function() {
 
 
-    var submitButton = document.getElementById("submitbutton");
+    var submitButton = document.getElementById("submitButton");
     var firstnameinput = document.getElementById("firstname");
     var lastnameinput = document.getElementById("lastname");
     var birthdayinput = document.getElementById("birthday");
@@ -26,15 +26,16 @@ document.addEventListener("DOMContentLoaded", function() {
     
     //.onclick = function () { alert('hello!'); };
     
-    submitButton.addEventListener("click", submitfunction);
+submitButton.addEventListener("click", submitfunction);
     
     function submitfunction (){
+      console.log(firstnameinput)
     var firstname = firstnameinput.value;
     var lastname = lastnameinput.value;
     var birthday = birthdayinput.value;
     var email = emailinput.value;
-    var gender = genderinput.value;
-    var interest = interestinput.value;
+    var gender = document.querySelector('input[name="gender"]:checked').value;
+    var interest = document.querySelector('input[name="interest"]:checked').value;
     var password = passwordinput.value;
 
         
