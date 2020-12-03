@@ -15,13 +15,13 @@ class User {
 document.addEventListener("DOMContentLoaded", function() {
 
 
-    var submitbutton = document.getElementById("submitbutton");
-    var firstNameinput = document.getElementById("firstNameinput");
-    var lastNameinput = document.getElementById("lastNameinput");
-    var birthdayinput = document.getElementById("birthdayinput");
-    var emailinput = document.getElementById("emailinput");
-    var genderinput = document.getElementById("genderinput");
-    var passwordinput = document.getElementById("passwordinput");
+    var submitbutton = document.getElementById("apiButton");
+    var firstNameinput = document.getElementById("firstName");
+    var lastNameinput = document.getElementById("lastName");
+    var birthdayinput = document.getElementById("birthday");
+    var emailinput = document.getElementById("email");
+    var genderinput = document.getElementById("gender");
+    var passwordinput = document.getElementById("password");
     
     submitbutton.addEventListener ("click", submitfunction);
     

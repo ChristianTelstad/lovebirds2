@@ -1,4 +1,4 @@
-// Create a very simple class
+
 class User {
     constructor(id, firstname, lastname, gender, birthday, email, password){
         this.id = id;
