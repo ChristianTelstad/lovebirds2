@@ -1,22 +1,22 @@
-// Create a very simple class
+
 class User {
-    constructor(id, firstname, lastname, gender, birthday, email, password){
-        this.id = id;
-        this.firstName = firstname;
-        this.lastname = lastname;
-        this.gender = gender;
-        this.birthday = birthday;
-        this.email = email;
-        this.password = password;
-    }
+  constructor(id, firstname, lastname, birthday, email, gender, password){
+      this.id = id;
+      this.firstName = firstname;
+      this.lastname = lastname;
+      this.birthday = birthday;
+      this.email = email;
+      this.gender = gender;
+      this.password = password;
+  }
 }
 
-    document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
 
 
-    var apibutton = document.getElementById("apiButton");
-    var firstNameinput = document.getElementById("firstName");
-    var lastNameinput = document.getElementById("lastName");
+    var submitbutton = document.getElementById("submitbutton");
+    var firstnameinput = document.getElementById("firstname");
+    var lastnameinput = document.getElementById("lastname");
     var birthdayinput = document.getElementById("birthday");
     var emailinput = document.getElementById("email");
     var genderinput = document.getElementById("gender");
@@ -24,20 +24,21 @@ class User {
     
     //.onclick = function () { alert('hello!'); };
     
-    function apifunction(){
-    var firstName = firstNameinput.value;
-    var lastName = lastNameinput.value;
+    function submitfunction (){
+    var firstname = firstnameinput.value;
+    var lastname = lastnameinput.value;
     var birthday = birthdayinput.value;
     var email = emailinput.value;
     var gender = genderinput.value;
     var password = passwordinput.value;
 
-    apibutton.addEventListener("click", apifunction);
+    submitButton.addEventListener("click", submitfunction);
     
     // var user= new User(username, birthday, gender, email, password);
         
     // hardcoder ny user ud fra model-klasse
-    let user = new User(1, firstName, lastName, gender, birthday, email, password);
+
+    let user = new User(1, firstname, lastname, gender, birthday, email, password);
     
      console.log("User Uploaded"); 
      uploadUser(user)

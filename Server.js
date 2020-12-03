@@ -15,8 +15,7 @@ server.use(express.json());
 server.use(express.urlencoded({extended: true}));
 
 server.get("/", function(req, res) {
-  res.sendFile(path.join(path.resolve() + "/View/sign.html"))
-  res.sendFile(path.join(path.resolve() + "/View/sign.html"))
+  res.sendFile(path.join(path.resolve() + "/View/signup.html"))
 });
 
 //server aktiveres
