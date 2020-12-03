@@ -11,7 +11,7 @@ class User {
     }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function() {
 
 
     var apibutton = document.getElementById("apiButton");
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
      console.log("User Uploaded"); 
      uploadUser(user)
     }
-    });
+});
 
     function uploadUser(user){
     
