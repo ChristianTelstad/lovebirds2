@@ -77,5 +77,98 @@
     margin: 8px 0;
     box-sizing: border-box;}
 
+#body1 {
+    background: #76b852; /* fallback for old browsers */
+    background: -webkit-linear-gradient(right, #ffffff, #ffffff);
+    background: -moz-linear-gradient(right, #ffffff, #ffffff);
+    background: -o-linear-gradient(right, #ffffff, #ffffff);
+    background: linear-gradient(to left, #ffffff, #ffffff);
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;}
 
+#form-s {
+    width: 360px;
+    position: relative;
+    z-index: 1;
+    background: #ffffff;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 4%;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);}
+
+#h1-s {
+    font-family: monospace;
+    font-size: 350%;
+    margin-top: -15%;}
+
+#signIn {
+    font-family: monospace;
+    text-transform: uppercase;
+    outline: 0;
+    background: #a62bfe;
+    width: 100%;
+    border: 0;
+    padding: 3%;
+    color: #ffffff;
+    font-size: 13%;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    font-size: 155%;}
+
+#submitButton {
+    font-family: monospace;
+    text-transform: uppercase;
+    outline: 0;
+    background: #a62bfe;
+    width: 100%;
+    border: 0;
+    padding: 3%;
+    color: #ffffff;
+    font-size: 13%;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    font-size: 155%;}
+
+#submitButton:hover,
+#submitButton:active,
+#submitButton:focus {
+    background: #a006ff;}
+
+#signIn:hover,
+#signIn:active,
+#signIn:focus {
+    background: #a006ff;}
+
+#form {
+    width: 360px;
+    position: relative;
+    z-index: 1;
+    background: #ffffff;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 4%;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);}
+
+#firstname, #lastname, #birthday, #email, #username, #password {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    margin-top: -5%}
+
+#first-s, #last-s, #birth-s, #email-s, #gender-s, #int-s, #user-s, #pass-s {
+    font-family: monospace;
+    font-size: 150%;
+    padding: -3%;
+    text-align: left;}
+
+#radio1, #radio2 {
+    font-family: monospace;
+    font-size: 130%;
+}
 

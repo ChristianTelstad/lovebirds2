@@ -4,62 +4,62 @@
 
     <meta charset="utf8">
     <title> Sign Up </title>
-    
 
-    <!--Header:-->
+
+    <link rel="stylesheet" href="../View/styles.css">
 
 </head>
 
 
-<body>
+<body id="body1">
 
       <script src="/Scripts/create.js"> </script> 
 
-      <div class="login-box"> </div>
-        <h1>Sign Up</h1>
+      <form id="form-s"> 
+        <h1 id="h1-s"> Sign Up</h1>
   
         <div class="textbox">
-          <p>First Name:</p>
+          <p id="first-s"> First Name:</p>
           <input type="text" id="firstname">
         </div>
       
         <div class="textbox">
-          <p>Last Name:</p>
+          <p id="last-s"> Last Name: </p>
           <input type="text" id="lastname">
         </div>
 
         <div class="textbox">
-          <p>Birthdate</p>
+          <p id="birth-s"> Birthdate</p>
           <input type="date" id="birthday">
         </div>
   
         <div class="textbox">
-          <p>Email:</p>
+          <p id="email-s"> Email:</p>
           <input type="text" id="email">
         </div>
 
-        <br>
-        <p> Gender </p>
-        <div class="gender">
-          <input type="Radio" value="Male" name="gender-M"> Male
+        
+        <p id="gender-s"> Gender </p>
+        <div class="gender" id="radio2">
+          <input type="Radio" value="Male" name="gender"> Male
           <input type="Radio" value="Female" name="gender"> Female
         </div>
 
-        <br>
-        <p> interest </p>
-        <div class="interest"> 
+        
+        <p id="int-s"> Interest </p>
+        <div class="interest" id="radio2"> 
           <input type="Radio" value="Male" name="interest"> Male
           <input type="Radio" value="Female" name="interest"> Female
           <input type="Radio" value="Both" name="interest"> Both
         </div>
 
         <div class="textbox">
-          <p>Username:</p>
+          <p id="user-s"> Username:</p>
           <input type="username" id="username">
         </div>
   
         <div class="textbox">
-          <p>Password:</p>
+          <p id="pass-s"> Password:</p>
           <input type="password" id="password">
         </div>
         
@@ -79,10 +79,13 @@
         <br>
 
       <button type="button" type="submit" value="submit" id="submitButton"> SIGN UP </button> 
-
+      <br>
+      <br>
       <button type="button" type="submit" value="submit" id="signIn" onclick="document.location='sign.html'" onclick=""> BACK TO LOGIN </button>
 
     </div>
+
+  </form>
 
 </body>
 
