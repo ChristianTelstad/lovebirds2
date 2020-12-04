@@ -31,5 +31,16 @@
         "interest": "Female",
         "username": "Philip",
         "password": "Blume"
+    },
+    {
+        "id": 4,
+        "firstName": "Sarah",
+        "lastname": "Poulsen",
+        "birthday": "2020-12-18",
+        "email": "Sara.p@live.dk",
+        "gender": "Female",
+        "interest": "Male",
+        "username": "Sarah",
+        "password": "Poulsen"
     }
 ]

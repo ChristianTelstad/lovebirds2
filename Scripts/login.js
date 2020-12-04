@@ -1,7 +1,7 @@
 
 function getInfo(){
-	var username = document.getElementById('username')
-    var password = document.getElementById('password')
+	var username = document.getElementById('lusername')
+    var password = document.getElementById('lpassword')
 
     let userLogin = {
         loginUsername: username.value,
