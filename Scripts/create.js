@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", function() {
     var lastnameinput = document.getElementById("lastname");
     var birthdayinput = document.getElementById("birthday");
     var emailinput = document.getElementById("email");
-    var gender = document.getElementById("gender");
-    var interest = document.getElementById("interest");
+    gender = document.getElementById("gender");
+    interest = document.getElementById("interest");
     var usernameinput = document.getElementById("username");
     var passwordinput = document.getElementById("password");
     
