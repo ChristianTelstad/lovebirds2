@@ -27,7 +27,7 @@ fetch('http://localhost:3000/userLogin', {
   if(data!= "nej"){
       location.href="../View/account.html"
   } else {
-      alert("fejl")
+      alert("Username or password incorrect")
   }
     console.log(data)
 }).catch(error=>{

@@ -2,6 +2,7 @@ import express from "express";
 import fs from "fs";
 import path from "path";
 import cors from "cors";
+import { nextTick } from "process";
 
 
 //initialiserer express-server
@@ -57,37 +58,16 @@ server.post("/createUser", (req, res) => {
 server.post("/userLogin", (req, res) => {
   console.log('hej');
   let user = JSON.parse(fs.readFileSync('users.json'));
-console.log(user)
+  console.log(user)
     for(var i=0; i<user.length; i++){
         if(req.body.loginUsername == user[i].username && req.body.loginPassword == user[i].password){
             console.log("DET VIRKER")
             res.json(user)
-        } else {
-            console.log("FEJL")
-            res.json("nej")
+        } 
       } 
-  }
+        console.log("FEJL")
+        res.json("nej") 
 })
-
-
-
-    /*
-function userLogin (req, res, next){
-  console.log('hej');
-  let user = JSON.parse(fs.readFileSync('./users.json'))
-  
-      for(var i=0; i<user.length; i++){
-          if(req.body.loginusername == user[i].username && req.body.loginpassword == user[i].password){
-              console.log("DET VIRKER")
-              res.json(user)
-          } else {
-              console.log("FEJL")
-              res.json("Fuckingshit")
-      } 
-  } 
-}*/
-
-
 
 
 server.delete("/deleteUser/:id", (req, res) => {

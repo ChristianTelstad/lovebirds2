@@ -1,13 +1,35 @@
 [
     {
         "id": 1,
-        "firstName": "Chris",
-        "lastname": "Tel",
+        "firstName": "Christian",
+        "lastname": "Telstad",
         "birthday": "2020-12-11",
-        "email": "Tel",
+        "email": "Chris.telstad@live.dk",
+        "gender": "Male",
+        "interest": "Female",
+        "username": "Chris",
+        "password": "Hello"
+    },
+    {
+        "id": 2,
+        "firstName": "Mo",
+        "lastname": "Inshallah",
+        "birthday": "2020-12-09",
+        "email": "Mo.in@live.dk",
         "gender": "Male",
         "interest": "Male",
-        "username": "Test",
-        "password": "test1"
+        "username": "Mo",
+        "password": "Mo123"
+    },
+    {
+        "id": 3,
+        "firstName": "Philip",
+        "lastname": "Blume",
+        "birthday": "2020-12-03",
+        "email": "Philip.Blume@gmail.com",
+        "gender": "Male",
+        "interest": "Female",
+        "username": "Philip",
+        "password": "Blume"
     }
 ]
