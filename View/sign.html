@@ -5,34 +5,34 @@
     <meta charset="utf8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignIn </title>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
 
     <!--Header:-->
  
 </head>
 
 <body>
-
-    <script src="Index.js"> </script>
     
+    <form>
 
     <div class="login-box">
       <h1>Login</h1>
       <div class="textbox">
-        <i class="fas fa-user"></i>
-        <input type="text" placeholder="Username">
+        <input type="text" id="username">
       </div>
 
     <br> 
       <div class="textbox">
-        <i class="fas fa-lock"></i>
-        <input type="password" placeholder="Password">
+        <input type="password" id="password">
       </div>
 
     <br>
-      <input type="button" class="btn" value="LOG IN" id="login" onclick="document.location='account.html'">
+      <button  type="button" onclick="getInfo()"> LOG IN </button>
       <input type="button" value="SIGN UP" id="signUp" onclick="document.location='signUp.html'">
     </div>
+
+  </form>
+
+  <script src="../Scripts/login.js"> </script>
 
 </body>
 
