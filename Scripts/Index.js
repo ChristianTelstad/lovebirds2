@@ -1,4 +1,39 @@
-function validatePasswordLenght() {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*function validatePasswordLenght() {
 
     if (password.value.length <= 8) {
         document.getElementById("passwordLenghtFeedback").style.color = "rgb(230, 5, 0)";
@@ -33,5 +68,5 @@ function validatePasswordUpperCase() {
 
 const storageInput = document.querySelector(".storage");
 const text = document.querySelector(".text");
-const button = document.querySelector(".button");
+const button = document.querySelector(".button");/*
 

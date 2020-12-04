@@ -7,29 +7,33 @@
     <title>SignIn </title>
 
     <!--Header:-->
+
+    <link rel="stylesheet" href="../View/styles.css">
  
 </head>
 
-<body>
+<body id="body"> 
     
-    <form>
+    <form id="form">
 
     
-      <h1>Login</h1>
+      <h1 id="h1-l"> LOGIN</h1>
 
-      <p> Username: </p>
-        <input type="text" id="username">
+      <p id="uname"> Username </p>
+        <input type="text" id="lusername">
       </div>
 
     <br> 
-      <p> Password: </p>
-        <input type="password" id="password">
+      <p id="pname"> Password </p>
+        <input type="password" id="lpassword">
       <br> 
       
 
     <br>
-    <button type="button" onclick="getInfo()">LOG IN</button>
-    <input type="button" value="SIGN UP" id="signUp" onclick="document.location='signUp.html'">
+    <button type="button" id="form-button" onclick="getInfo()">LOGIN</button>
+    <br>
+    <br>
+    <button type="button" id="signUp-button" onclick="document.location='signUp.html'"> SIGN UP HERE </button>
     
 
   </form>

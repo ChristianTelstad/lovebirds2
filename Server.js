@@ -2,7 +2,7 @@ import express from "express";
 import fs from "fs";
 import path from "path";
 import cors from "cors";
-import { nextTick } from "process";
+
 
 
 //initialiserer express-server
@@ -66,7 +66,7 @@ server.post("/userLogin", (req, res) => {
         } 
       } 
         console.log("FEJL")
-        res.json("nej") 
+        res.json("FAILED") 
 })
 
 
@@ -87,6 +87,7 @@ server.delete("/deleteUser/:id", (req, res) => {
     }
   });
 });
+
 
 
 //server.post 

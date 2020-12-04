@@ -24,7 +24,7 @@ fetch('http://localhost:3000/userLogin', {
   
 }).then(res => res.json())
 .then (data => {
-  if(data!= "nej"){
+  if(data!= "FAILED"){
       location.href="../View/account.html"
   } else {
       alert("Username or password incorrect")
