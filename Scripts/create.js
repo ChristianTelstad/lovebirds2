@@ -1,6 +1,6 @@
 
 class User {
-  constructor(id, firstname, lastname, birthday, email, gender, interest, password){
+  constructor(id, firstname, lastname, birthday, email, gender, interest, username, password){
       this.id = id;
       this.firstName = firstname;
       this.lastname = lastname;
@@ -8,6 +8,7 @@ class User {
       this.email = email;
       this.gender = gender;
       this.interest = interest;
+      this.username = username;
       this.password = password;
   }
 }
@@ -20,8 +21,9 @@ document.addEventListener("DOMContentLoaded", function() {
     var lastnameinput = document.getElementById("lastname");
     var birthdayinput = document.getElementById("birthday");
     var emailinput = document.getElementById("email");
-    var genderinput = document.getElementById("gender");
+    var gender = document.getElementById("gender");
     var interest = document.getElementById("interest");
+    var usernameinput = document.getElementById("username");
     var passwordinput = document.getElementById("password");
     
     //.onclick = function () { alert('hello!'); };
@@ -29,19 +31,19 @@ document.addEventListener("DOMContentLoaded", function() {
 submitButton.addEventListener("click", submitfunction);
     
     function submitfunction (){
-      console.log(firstnameinput)
     var firstname = firstnameinput.value;
     var lastname = lastnameinput.value;
     var birthday = birthdayinput.value;
     var email = emailinput.value;
     var gender = document.querySelector('input[name="gender"]:checked').value;
     var interest = document.querySelector('input[name="interest"]:checked').value;
+    var username = usernameinput.value;
     var password = passwordinput.value;
 
         
     //hardcoder ny user ud fra model-klasse
 
-    let user = new User(1, firstname, lastname, birthday, email,  gender, interest, password);
+    let user = new User(1, firstname, lastname, birthday, email, gender, interest, username, password);
     
      console.log("User Uploaded"); 
      uploadUser(user)
