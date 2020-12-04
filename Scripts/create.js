@@ -65,9 +65,9 @@ submitButton.addEventListener("click", submitfunction);
     }).catch(error=>{
       console.log(error)
     })
+    
 }
 
-  
 
 
 

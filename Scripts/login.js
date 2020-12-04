@@ -1,26 +1,35 @@
-import fs from "fs";
 
+function getInfo(){
+	var username = document.getElementById('username')
+    var password = document.getElementById('password')
 
-function getInfo(req, res) {
-	var username = document.getElementById('username').value
-	var password = document.getElementById('password').value}
+    let userLogin = {
+        loginUsername: username.value,
+        loginPassword: password.value
+    }
 
-    
+    login(userLogin)
 
+}
 
-
-function login(user){
+function login(userLogin){
     
     //Laver en fetch, see https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
-fetch('http://localhost:3000/createUser', {
+fetch('http://localhost:3000/userLogin', {
   method: 'POST', // or 'PUT'
   headers: {
     'Content-Type': 'application/json',
   },
-  body: JSON.stringify(user),
+  body: JSON.stringify(userLogin),
   
-}).then(response =>{
-  console.log(response)
+}).then(res => res.json())
+.then (data => {
+  if(data!= "nej"){
+      location.href="../View/account.html"
+  } else {
+      alert("fejl")
+  }
+    console.log(data)
 }).catch(error=>{
   console.log(error)
 })

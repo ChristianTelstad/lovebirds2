@@ -1,1 +1,13 @@
-[]
+[
+    {
+        "id": 1,
+        "firstName": "Chris",
+        "lastname": "Tel",
+        "birthday": "2020-12-11",
+        "email": "Tel",
+        "gender": "Male",
+        "interest": "Male",
+        "username": "Test",
+        "password": "test1"
+    }
+]
