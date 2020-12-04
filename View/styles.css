@@ -58,29 +58,24 @@
     background: linear-gradient(to left, #ffffff, #ffffff);
     font-family: "Roboto", sans-serif;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;      
-}
+    -moz-osx-font-smoothing: grayscale;}
 
 #h1-l {
     font-family: monospace;
     font-size: 350%;
-    margin-top: -6%;
-
-}
+    margin-top: -6%;}
 
 #uname, #pname {
     font-family: monospace;
     font-size: 150%;
     padding: -3%;
-    text-align: left;
-}
+    text-align: left;}
 
 #lpassword, #lusername {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
-    box-sizing: border-box;
-}
+    box-sizing: border-box;}
 
 
 
