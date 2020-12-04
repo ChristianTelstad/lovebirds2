@@ -69,6 +69,26 @@ server.delete("/deleteUser/:id", (req, res) => {
   });
 });
 
+
+
+function login (req, res, next){
+  console.log('hej');
+  let user = JSON.parse(fs.readFileSync('./users.json'))
+  
+      for(var i=0; i<user.length; i++){
+          if(req.body.loginusername == user[i].username && req.body.loginpassword == user[i].password){
+              console.log("DET VIRKER")
+              res.json(user)
+          } else {
+              console.log("FEJL")
+              res.json("Fuckingshit")
+      } 
+  } 
+}
+
+
+//server.post 
+
 //server aktiveres
 server.listen(port, () => {
   console.log(`Server-applikation lytter på http://localhost:${port}`)

@@ -31,14 +31,14 @@ document.addEventListener("DOMContentLoaded", function() {
 submitButton.addEventListener("click", submitfunction);
     
     function submitfunction (){
-    var firstname = firstnameinput.value;
-    var lastname = lastnameinput.value;
-    var birthday = birthdayinput.value;
-    var email = emailinput.value;
-    var gender = document.querySelector('input[name="gender"]:checked').value;
-    var interest = document.querySelector('input[name="interest"]:checked').value;
-    var username = usernameinput.value;
-    var password = passwordinput.value;
+      firstname = firstnameinput.value;
+      lastname = lastnameinput.value;
+      birthday = birthdayinput.value;
+      email = emailinput.value;
+      gender = document.querySelector('input[name="gender"]:checked').value;
+      interest = document.querySelector('input[name="interest"]:checked').value;
+      username = usernameinput.value;
+      password = passwordinput.value;
 
         
     //hardcoder ny user ud fra model-klasse
