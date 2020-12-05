@@ -40,13 +40,13 @@
     font-size: 155%;}
 
 #signUp-button:hover,
-#signUp-button:active,
-#signUp-button:focus {
+#signUp-button:hover,
+#signUp-button:hover {
     background: #a006ff;}
 
 #form-button:hover,
-#form-button:active,
-#form-button:focus {
+#form-button:hover,
+#form-button:hover {
     background: #a006ff;}
 
 
@@ -67,7 +67,7 @@
 
 #uname, #pname {
     font-family: monospace;
-    font-size: 150%;
+    font-size: 160%;
     padding: -3%;
     text-align: left;}
 
@@ -75,7 +75,9 @@
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
-    box-sizing: border-box;}
+    box-sizing: border-box;
+    font-family: monospace;
+    font-size: 170%;}
 
 #body1 {
     background: #76b852; /* fallback for old browsers */
@@ -143,6 +145,13 @@
 #signIn:focus {
     background: #a006ff;}
 
+#matchesbutton:hover,
+#updatebutton:hover,
+#logoutUserbutton:hover,
+#deleteUserbutton:hover {
+    background: #a006ff;
+}
+
 #form {
     width: 360px;
     position: relative;
@@ -159,7 +168,8 @@
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
-    margin-top: -5%}
+    margin-top: -5%;
+    font-family: monospace;}
 
 #first-s, #last-s, #birth-s, #email-s, #gender-s, #int-s, #user-s, #pass-s {
     font-family: monospace;
@@ -171,4 +181,62 @@
     font-family: monospace;
     font-size: 130%;
 }
+
+/* ACCOUNT CSS'*/
+
+#form-a {
+    width: 200%;
+    position: relative;
+    z-index: 1;
+    background: #ffffff;
+    max-width: 30%;
+    margin: auto;
+    padding: 4%;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);}
+    
+
+#h1-a {
+    font-family: monospace;
+    font-size: 350%;
+    margin-top: -8%;}
+
+
+#matchesbutton, #updatebutton, #logoutUserbutton, #deleteUserbutton {
+    font-family: monospace;
+    text-transform: uppercase;
+    outline: 0;
+    background: #a62bfe;
+    width: 100%;
+    border: 0;
+    padding: 3%;
+    color: #ffffff;
+    font-size: 13%;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    font-size: 155%;}
+
+#usernameinfo, #firstnameinfo, #lastnameinfo, #ageinfo {
+    font-family: monospace;
+    color: black;}
+
+#laname, #agee {
+    font-family: monospace;
+    font-size: 170%;
+    text-align: left;
+    text-decoration-line: underline;}
+
+#usname, #finame {
+    font-family: monospace;
+    font-size: 170%;
+    text-align: left;
+    text-decoration-line: underline;}
+
+#usernameinfo, #firstnameinfo, #lastnameinfo, #ageinfo {
+    font-family: monospace;
+    font-size: 145%;
+    display: list-item;
+    display: table-row;
+    margin-right: 70%;}
 

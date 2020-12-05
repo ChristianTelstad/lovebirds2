@@ -2,25 +2,50 @@
 <html>
 <head>
 
-<title>Page Title</title>
+    <title> ACCOUNT PAGE </title>
+
+    <script src="../Scripts/account.js"> </script>
+
+    <link rel="stylesheet" href="../View/styles.css">
 
 </head>
 
-<body>
-    <script src="../Scripts/account.js"> </script>
+<body id="body2">
+    
 
-    <p> <strong> MY ACCOUNT </strong> </p>
+<form id="form-a"> 
 
-    <p id="nameinfo"></p>
-    <p id="ageinfo"></p>
+    <h1 id="h1-a"> <strong> MY ACCOUNT </strong> </h1>
+
+
+    <p id="usname"> <strong> USERNAME </strong> </p> 
+    <div id="usernameinfo"> </div>
+
+    <p id="finame"> <strong> FIRSTNAME </strong></p>
+    <div id="firstnameinfo"> </div>
+    
+    <p id="laname"> <strong> LASTNAME </strong> </p>
+    <div id="lastnameinfo"> </div>
+    
+    <p id=agee> <strong> BIRTHDATE </strong> </p>
+    <div id="ageinfo"> </div>
+    
+    <br>
     <form>
-        <input type="button" id="matches" value="MY MATCHES" onclick="document.location='match.html'">
-        <input type="button" id="opdate" value="EDIT PROFILE" onclick="document.location='opdate.html'">
-        <input type="button" id="logoutUser" value="LOG OUT" onclick="document.location='sign.html'">
-        <input type="button" id="deleteUser" value="DELETE PROFILE">
+        <input type="button" id="matchesbutton" value="MY MATCHES" onclick="document.location='match.html'">
+        <br>
+        <br>
+        <input type="button" id="updatebutton" value="EDIT PROFILE" onclick="document.location='opdate.html'">
+        <br>
+        <br>
+        <input type="button" id="logoutUserbutton" value="LOG OUT" onclick="document.location='sign.html'">
+        <br>
+        <br>
+        <input type="button" id="deleteUserbutton" value="DELETE PROFILE">
     </form>
 
-
+</form>
 
 </body>
+
 </html>

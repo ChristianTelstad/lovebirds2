@@ -91,7 +91,7 @@ async function alreadyLoggedIn(){
     console.log(user)
     if (user.msg != "Out"){
         console.log ("LOGGED IN THANK GOD")
-        location.href="./account.html"
+        //location.href="./account.html"
     }
     console.log("FEJL")
 }
