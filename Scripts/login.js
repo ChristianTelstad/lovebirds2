@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let user = new User(1, username, password);
 
-        console.log("WORKS");
+        console.log("FEJL");
         login(user)
     }
     alreadyLoggedIn();
@@ -58,12 +58,11 @@ fetch('http://localhost:3000/userLogin', {
   
 }).then(res => res.json())
 .then (data => {
-    localStorage.setItem("active", data)
   if(data!= "CORRECT"){
       location.href="../View/account.html"
-  } else {
-      alert("Username or password incorrect")
-  }
+} else {
+      alert("Username or Password incorrect")}
+      
     console.log(data)
 }).catch(error=>{
   console.log("FEJL" + error)

@@ -93,14 +93,6 @@ server.delete("/logout", (req, res) => {
       })
 });
 
-server.get("/updateUser", (req, res) => {
-  fs.readFile("loggedinUser.json", (err, data) => {
-    var updateUser = JSON.parse(data);
-    res.json(updateUser);
-  })
-})
-
-
 server.delete("/deleteUser:id", (req, res) => {
   fs.readFile('./users.json', "utf8", (err, data) => {
     users = JSON.parse(data);
