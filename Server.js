@@ -54,19 +54,33 @@ server.post("/createUser", (req, res) => {
 });
 
 
-//PETER REFFERENCE 
+//PETER DREYER REFFERENCE 
 server.post("/userLogin", (req, res) => {
   console.log('hej');
-  let user = JSON.parse(fs.readFileSync('users.json'));
-  console.log(user)
-    for(var i=0; i<user.length; i++){
-        if(req.body.loginUsername == user[i].username && req.body.loginPassword == user[i].password){
-            console.log("DET VIRKER")
-            res.json(user)
-        } 
-      } 
-        console.log("FEJL")
-        res.json("FAILED") 
+  users = JSON.parse(fs.readFileSync('users.json'));
+  console.log(users)
+    for(var i=0; i<users.length; i++){
+        if(req.body.loginUsername == users[i].username && req.body.loginPassword == users[i].password){
+            console.log("DET VIRKER");
+            var jsonData = JSON.stringify(users[i]);
+            fs.writeFile("loggedinUser.json", jsonData, function (err) {
+              if (err) {
+                console.log(err);
+              }
+            });
+            res.json(users[i])
+            return
+        }
+      }
+      console.log("FEJL")
+      res.json("FAILED")               
+});
+
+server.get("/loggedinUser", (req, res) => {
+  fs.readFile('./loggedinUser.json', (err, data) => {
+    var user = JSON.parse(data);
+    res.json(user);
+  })
 })
 
 
@@ -83,12 +97,19 @@ server.delete("/deleteUser/:id", (req, res) => {
           console.log(err);
         }
       });
-      res.sendStatus(200);
+      fs.writeFile("loggedinUser.json", null, function (err) {
+        if (err) {
+          console.log(err)
+        }      
+      })
+      console.log("deleted")
+      res.sendStatus(300);
+    } else {
+      console.log("error deleting")
+      res.sendStatus(600);
     }
   });
 });
-
-
 
 //server.post 
 
@@ -96,8 +117,6 @@ server.delete("/deleteUser/:id", (req, res) => {
 server.listen(port, () => {
   console.log(`Server-applikation lytter på http://localhost:${port}`)
 });
-
-
 
 
 //connect to mongoDB

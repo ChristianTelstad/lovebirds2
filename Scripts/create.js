@@ -47,7 +47,7 @@ submitButton.addEventListener("click", submitfunction);
     
      console.log("User Uploaded"); 
      uploadUser(user)
-    }
+    };
 });
 
     function uploadUser(user){
@@ -64,9 +64,8 @@ submitButton.addEventListener("click", submitfunction);
       console.log(response)
     }).catch(error=>{
       console.log(error)
-    })
-    
-}
+    }); 
+};
 
 
 
