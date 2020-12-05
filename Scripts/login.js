@@ -11,6 +11,7 @@ var user = null;
 
 document.addEventListener("DOMContentLoaded", function () {
 
+    var submitbutton = document.getElementById("form-button")
     var usernameinput = document.getElementById("lusername");
     var passwordinput = document.getElementById("lpassword");
 
