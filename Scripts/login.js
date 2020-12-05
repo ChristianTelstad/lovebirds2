@@ -11,7 +11,7 @@ var user = null;
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    var submitbutton = document.getElementById("form-button")
+    var submitbutton = document.getElementById("form-button");
     var usernameinput = document.getElementById("lusername");
     var passwordinput = document.getElementById("lpassword");
 
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var password = passwordinput.value;
 
 
-        let user = new User(1, username, password);
+    let user = new User(1, username, password);
 
         console.log("WORKS");
         login(user)
@@ -59,7 +59,7 @@ fetch('http://localhost:3000/userLogin', {
 }).then(res => res.json())
 .then (data => {
     localStorage.setItem("active", data)
-  if(data!= "FAILED"){
+  if(data!= "CORRECT"){
       location.href="../View/account.html"
   } else {
       alert("Username or password incorrect")

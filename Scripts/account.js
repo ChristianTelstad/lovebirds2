@@ -17,8 +17,9 @@ document.addEventListener("DOMContentLoaded", function() {
     var user;
 
     usernameinfo = document.getElementById("usernameinfo");
-    firstnameinfo = document.getElementById("firstnameinfo")
-    lastnameinfo = document.getElementById("lastnameinfo")
+    firstnameinfo = document.getElementById("firstnameinfo");
+    lastnameinfo = document.getElementById("lastnameinfo");
+
     ageinfo = document.getElementById("ageinfo");
     
 
@@ -50,10 +51,10 @@ fetch('http://localhost:3000/loggedinUser', {
 .then (data => {
     users = data;
     console.log(data)
-    usernameinfo.innerHTML = data.username
-    firstnameinfo.innerHTML = data.firstName
-    lastnameinfo.innerHTML = data.lastname
-    ageinfo.innerHTML = data.birthday
+    usernameinfo.value = data.username
+    firstnameinfo.value = data.firstName
+    lastnameinfo.value = data.lastname
+    ageinfo.value = data.birthday
     }).catch(error => {
     console.log("FEJL" + error)
     })
@@ -84,6 +85,8 @@ fetch('http://localhost:3000/logout', {
      console.log("FEJL" + error)
      })
 }
+
+
 
 
 

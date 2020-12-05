@@ -84,7 +84,7 @@ server.get("/loggedinUser", (req, res) => {
 })
 
 server.delete("/logout", (req, res) => {
-      fs.writeFile("loggedinUser.json", JSON.stringify({"msg" :"out"}), function (err) {
+    fs.writeFile("loggedinUser.json", JSON.stringify({"msg" :"out"}), function (err) {
         if (err) {
           console.log(err);
         } else {
@@ -92,6 +92,13 @@ server.delete("/logout", (req, res) => {
         }     
       })
 });
+
+server.get("/updateUser", (req, res) => {
+  fs.readFile("loggedinUser.json", (err, data) => {
+    var updateUser = JSON.parse(data);
+    res.json(updateUser);
+  })
+})
 
 
 server.delete("/deleteUser:id", (req, res) => {
