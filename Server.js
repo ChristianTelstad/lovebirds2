@@ -60,20 +60,22 @@ server.post("/userLogin", (req, res) => {
   users = JSON.parse(fs.readFileSync('users.json'));
   console.log(users)
     for(var i=0; i<users.length; i++){
+      console.log(req.body.loginUsername)
+      console.log(req.body.loginPassword)
         if(req.body.loginUsername == users[i].username && req.body.loginPassword == users[i].password){
             console.log("DET VIRKER");
             var jsonData = JSON.stringify(users[i]);
             fs.writeFile("loggedinUser.json", jsonData, function (err) {
               if (err) {
                 console.log(err);
+                console.log("FEJL")
+                res.json("FAILED") 
               }
             });
             res.json(users[i])
             return
         }
-      }
-      console.log("FEJL")
-      res.json("FAILED")               
+      }          
 });
 
 server.get("/loggedinUser", (req, res) => {
@@ -82,6 +84,37 @@ server.get("/loggedinUser", (req, res) => {
     res.json(user);
   })
 })
+
+/*server.delete("/logout", (req, res) => {
+  fs.readFile('./loggedinUser.json', "utf8", (err, data) => {
+    users = JSON.parse(data);
+    var removeindex = users.findIndex((user) => user.id ==+ req.params.id)
+    console.log(removeindex)
+    if(removeindex >= 0) {
+      users.splice(removeindex, 1);
+      fs.writeFile("loggedinUser.json", {}, function (err) {
+        if (err) {
+          console.log(err);
+        }      
+      })
+      console.log("LOGGED OUT")
+      res.sendStatus(300);
+    } else {
+      console.log("CAN'T LOG OUT")
+      res.sendStatus(600);
+    }
+  });
+});*/
+
+server.delete("/logout", (req, res) => {
+      fs.writeFile("loggedinUser.json", JSON.stringify({"msg": "Logged out"}), function (err) {
+        if (err) {
+          console.log(err);
+        } else {
+          res.send('logged out')
+        }     
+      })
+});
 
 
 server.delete("/deleteUser:id", (req, res) => {

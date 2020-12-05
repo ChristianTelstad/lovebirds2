@@ -42,3 +42,13 @@ function validatePasswordUpperCase() {
 const storageInput = document.querySelector(".storage");
 const text = document.querySelector(".text");
 const button = document.querySelector(".button");//
+
+
+
+Save user i JSON
+
+Loop igennem users.
+
+Dislike, ny bruger.
+
+

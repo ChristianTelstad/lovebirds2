@@ -14,17 +14,24 @@ class User {
 
 document.addEventListener("DOMContentLoaded", function() {
 
-    var users;
+    var user;
 
     nameinfo = document.getElementById("nameinfo");
     ageinfo = document.getElementById("ageinfo");
 
     slet = document.getElementById("deleteUser");
     slet.addEventListener("click", deleteuserButton)
+    logout = document.getElementById("logoutUser");
+    logout.addEventListener("click", logoutUserButton)
 
     function deleteuserButton() {
         deleteUserProfile();
     }
+
+    function logoutUserButton() {
+        logoutUser();
+    }
+
     getUser();
 })
 
@@ -56,6 +63,19 @@ fetch('http://localhost:3000/deleteUser' + users.id, {
   }).catch(error => {
       console.log("FEJL" + error)
     })
+}
+
+function logoutUser() {
+
+    //Laver en fetch, see https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+fetch('http://localhost:3000/logout' ,{
+   method: 'DELETE', // or 'PUT'
+   
+ }).then(res => {
+     location.href="./sign.html"
+ }).catch(error => {
+     console.log("FEJL" + error)
+   })
 }
 
 

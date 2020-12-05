@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let user = new User(1, username, password);
 
         console.log("WORKS");
-        uploadUser(user)
+        login(user)
     }
     alreadyLoggedIn();
 
@@ -58,6 +58,7 @@ fetch('http://localhost:3000/userLogin', {
   
 }).then(res => res.json())
 .then (data => {
+    localStorage.setItem("active", data)
   if(data!= "FAILED"){
       location.href="../View/account.html"
   } else {
@@ -79,14 +80,16 @@ function getUser() {
         .then(data => {
             user = data;
             console.log(data)
+            return user
         }).catch(error => {
             console.log("FEJL" + error)
         })
 }
 
 async function alreadyLoggedIn(){
-    await getUser();
-    if (user != null){
+    user = await getUser();
+    console.log(user)
+    if (user.msg != "Out"){
         console.log ("LOGGED IN THANK GOD")
         location.href="./account.html"
     }
