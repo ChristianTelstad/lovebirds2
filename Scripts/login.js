@@ -1,4 +1,37 @@
 
+class User {
+    constructor(id, username, password) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+    }
+}
+
+var user = null;
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    var usernameinput = document.getElementById("lusername");
+    var passwordinput = document.getElementById("lpassword");
+
+
+    submitbutton.addEventListener("click", loginfunction);
+    
+
+    function loginfunction() {
+        var username = usernameinput.value;
+        var password = passwordinput.value;
+
+
+        let user = new User(1, username, password);
+
+        console.log("WORKS");
+        uploadUser(user)
+    }
+    alreadyLoggedIn();
+
+});
+
 function getInfo(){
 	var username = document.getElementById('lusername')
     var password = document.getElementById('lpassword')
@@ -31,8 +64,30 @@ fetch('http://localhost:3000/userLogin', {
   }
     console.log(data)
 }).catch(error=>{
-  console.log(error)
+  console.log("FEJL" + error)
 })
 }
 
+function getUser() {
 
+    //Laver en fetch, see https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+    return fetch('http://localhost:3000/loggedinUser', {
+        method: 'GET', // or 'PUT'
+
+    }).then(response => response.json())
+        .then(data => {
+            user = data;
+            console.log(data)
+        }).catch(error => {
+            console.log("FEJL" + error)
+        })
+}
+
+async function alreadyLoggedIn(){
+    await getUser();
+    if (user != null){
+        console.log ("LOGGED IN THANK GOD")
+        location.href="./account.html"
+    }
+    console.log("FEJL")
+}

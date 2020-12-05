@@ -14,7 +14,7 @@ class User {
 
 document.addEventListener("DOMContentLoaded", function() {
 
-    var user;
+    var users;
 
     nameinfo = document.getElementById("nameinfo");
     ageinfo = document.getElementById("ageinfo");
@@ -37,22 +37,21 @@ fetch('http://localhost:3000/loggedinUser', {
   
 }).then(res => res.json())
 .then (data => {
-    user = data;
+    users = data;
     console.log(data)
-    nametext.innerHTML = data.username
+    nameinfo.innerHTML = data.username
     }).catch(error => {
-        console.log("FEJL" + error)
+    console.log("FEJL" + error)
     })
 }
 
 function deleteUserProfile() {
 
      //Laver en fetch, see https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
-fetch('http://localhost:3000/deleteUser' + user.id, {
+fetch('http://localhost:3000/deleteUser' + users.id, {
     method: 'DELETE', // or 'PUT'
     
-  }).then(res => res.json())
-  .then (data => {
+  }).then(res => {
       location.href="./sign.html"
   }).catch(error => {
       console.log("FEJL" + error)
