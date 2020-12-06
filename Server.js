@@ -16,8 +16,9 @@ server.use(express.json());
 server.use(express.urlencoded({extended: true}));
 server.use(cors());
 
-server.get("/", function(req, res) {
+server.get("/", function (req, res) {
   res.sendFile(path.join(path.resolve() + "/View/signup.html"))
+  res.sendFile(path.join(path.resolve() + "/View/sign.html"))
 });
 
 server.get("/users", (req, res) => {
@@ -76,15 +77,22 @@ server.post("/userLogin", (req, res) => {
       }          
 });
 
+server.get("/updateUser", (req, res) => {
+  fs.readFile('./loggedinUser.json', (err, data) => {
+    var users = JSON.parse(data);
+    res.json(users);
+  })
+})
+
 server.get("/loggedinUser", (req, res) => {
   fs.readFile('./loggedinUser.json', (err, data) => {
-    var user = JSON.parse(data);
-    res.json(user);
+    var users = JSON.parse(data);
+    res.json(users);
   })
 })
 
 server.delete("/logout", (req, res) => {
-    fs.writeFile("loggedinUser.json", JSON.stringify({"msg" :"out"}), function (err) {
+    fs.writeFile("loggedinUser.json", JSON.stringify ({"msg" : "out"}), function (err) {
         if (err) {
           console.log(err);
         } else {
@@ -96,7 +104,7 @@ server.delete("/logout", (req, res) => {
 server.delete("/deleteUser:id", (req, res) => {
   fs.readFile('./users.json', "utf8", (err, data) => {
     users = JSON.parse(data);
-    var deleteindex = users.findIndex((user) => user.id==+ req.params.id)
+    var deleteindex = users.findIndex((users) => users.id==+ req.params.id)
     console.log(deleteindex)
     if(deleteindex >= 0) {
       users.splice(deleteindex, 1);

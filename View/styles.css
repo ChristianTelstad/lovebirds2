@@ -224,16 +224,14 @@
 #laname, #agee {
     font-family: monospace;
     font-size: 170%;
-    text-align: left;
-    text-decoration-line: underline;}
+    text-align: left;}
 
-#usname, #finame {
+#usname, #finame, #pass {
     font-family: monospace;
     font-size: 170%;
-    text-align: left;
-    text-decoration-line: underline;}
+    text-align: left;}
 
-#usernameinfo, #firstnameinfo, #lastnameinfo, #ageinfo {
+#usernameinfo, #firstnameinfo, #lastnameinfo, #ageinfo, #passinfo {
     font-family: monospace;
     font-size: 145%;
     display: list-item;

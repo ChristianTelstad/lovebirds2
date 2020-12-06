@@ -1,4 +1,4 @@
-class User {
+/* class User {
     constructor(id, username, password) {
         this.id = id;
         this.username = username;
@@ -8,19 +8,23 @@ class User {
 
 document.addEventListener("DOMContentLOADED", function () {
 
-    var updatebutton = document.getElementById("updatebutton")
-    var newusernameinput = document.getElementById("username");
-    var changepasswordinput = document.getElementById("changepassword");
-    var confirmpasswordinput = document.getElementById("confirmpassword");
+    var updatebutton = document.getElementById("updatebutton");
+    var newusernameinput = document.getElementById("usernameinfo");
+    var firstnameinput = document.getElementById("firstnameinfo");
+    var lastnameinput = document.getElementById("lastnameinfo");
+    var ageinput = document.getElementById("ageinfo");
+    var passwordinput= document.getElementById("passinfo");
 
     updatebutton.addEventListener("click", updatefunction);
 
     function updatefunction () {
         var username = newusernameinput.value
-        var password = changepasswordinput.value
-        var password = confirmpasswordinput.value
+        var firstname = firstnameinput.value
+        var lastname = lastnameinput.value
+        var birthday = ageinput.value
+        var password = passwordinput.value
 
-    let user = new User (1, username, password)
+    let user = new User (1, username, firstname, lastname, birthday, password, password)
 
     console.log("WORKS");
     update(user)
@@ -29,20 +33,22 @@ document.addEventListener("DOMContentLOADED", function () {
     updateUser();
 })
 
-function updateUser(){
-    
-    //Laver en fetch, see https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+
+function update(updateUser) {
+
 fetch('http://localhost:3000/updateUser', {
-    method: 'GET', // or 'PUT'
-  
-}).then(res => res.json())
-.then (data => {
-    users = data;
-    console.log(data)
-    location.href="./update.html"
-    }).catch(error => {
-    console.log("FEJL" + error)
-    })
+  method: 'GET', // or 'PUT'
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(updateUser),
+})
+.then(response => response.json())
+.then(data => {
+  console.log('Success:', data);
+})
+.catch((error) => {
+  console.error('Error:', error);
+});
 }
-
-
+*/

@@ -20,5 +20,49 @@
         "interest": "Male",
         "username": "Mat",
         "password": "Mat1"
+    },
+    {
+        "id": 3,
+        "firstName": "At",
+        "lastname": "Tel",
+        "birthday": "2020-12-13",
+        "email": "Te",
+        "gender": "Female",
+        "interest": "Female",
+        "username": "At",
+        "password": "At1"
+    },
+    {
+        "id": 4,
+        "firstName": "wew",
+        "lastname": "wew",
+        "birthday": "2020-12-11",
+        "email": "we",
+        "gender": "Male",
+        "interest": "Male",
+        "username": "we",
+        "password": "we1"
+    },
+    {
+        "id": 5,
+        "firstName": "Chris",
+        "lastname": "Tel",
+        "birthday": "2332-12-12",
+        "email": "Chris",
+        "gender": "Male",
+        "interest": "Male",
+        "username": "Chris",
+        "password": "Chris1"
+    },
+    {
+        "id": 6,
+        "firstName": "Tel",
+        "lastname": "Tels",
+        "birthday": "2322-12-12",
+        "email": "Telsa",
+        "gender": "Male",
+        "interest": "Male",
+        "username": "Tel",
+        "password": "Tel1"
     }
 ]
