@@ -1,3 +1,4 @@
+
 class User {
     constructor(id, username, password) {
         this.id = id;
@@ -6,9 +7,9 @@ class User {
     }
 }
 
-    var user = null;
+var user = null;
 
-    document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
 
     var submitbutton = document.getElementById("form-button");
     var usernameinput = document.getElementById("lusername");
@@ -28,13 +29,24 @@ class User {
         console.log("FEJL");
         login(user)
     }
-
     alreadyLoggedIn();
 
 });
 
+function getInfo(){
+	var username = document.getElementById('lusername')
+    var password = document.getElementById('lpassword')
 
-function login(user){
+    let userLogin = {
+        loginUsername: username.value,
+        loginPassword: password.value
+    }
+
+    login(userLogin)
+
+}
+
+function login(userLogin){
     
     //Laver en fetch, see https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
 fetch('http://localhost:3000/userLogin', {
@@ -42,7 +54,7 @@ fetch('http://localhost:3000/userLogin', {
   headers: {
     'Content-Type': 'application/json',
   },
-  body: JSON.stringify(user),
+  body: JSON.stringify(userLogin),
   
     }).then(res => res.json())
     .then (data => {

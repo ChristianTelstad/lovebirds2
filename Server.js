@@ -31,8 +31,8 @@ server.get("/users", (req, res) => {
 server.get("/users/:id", (req, res) => {
   fs.readFile('./users.json', "utf8", (err, data) => {
     users = JSON.parse(data);
-    res.json(users.find((user) => {
-      return req.params.id == user.id;
+    res.json(users.find((users) => {
+      return req.params.id == users.id;
     }));
   });
 });
@@ -77,12 +77,29 @@ server.post("/userLogin", (req, res) => {
       }          
 });
 
-server.get("/updateUser", (req, res) => {
-  fs.readFile('./loggedinUser.json', (err, data) => {
-    var users = JSON.parse(data);
-    res.json(users);
-  })
-})
+server.post("/updateUser", (req, res) => {
+  console.log(1)
+
+  // fs.readFile('./users.json', "utf8", (err, data) => {
+  //   users = JSON.parse(data);
+  //   req.body.id = users.length + 1;
+  //   users.push(req.body);
+  //   var jsonData = JSON.stringify(users);
+  //     fs.writeFile("./users.json", jsonData, function (err) {
+  //       if (err) {
+  //         console.log(err);
+  //       }
+  //     });
+  //     res.sendStatus(200);
+  // });
+});
+
+// server.get("/updateUser", (req, res) => {
+//   fs.readFile('./loggedinUser.json', (err, data) => {
+//     var users = JSON.parse(data);
+//     res.json(users);
+//   })
+// })
 
 server.get("/loggedinUser", (req, res) => {
   fs.readFile('./loggedinUser.json', (err, data) => {

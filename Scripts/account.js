@@ -41,7 +41,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function updateUserButton() {
-        updateUserProfile
+        console.log("Her")
+        updateUserProfile();
+        
     }
 
     getUser();
@@ -97,7 +99,7 @@ fetch('http://localhost:3000/logout', {
 function updateUserProfile() {
 
     fetch('http://localhost:3000/updateUser', {
-      method: 'GET', // or 'PUT'
+      method: 'POST', // or 'PUT'
       headers: {
         'Content-Type': 'application/json',
     },

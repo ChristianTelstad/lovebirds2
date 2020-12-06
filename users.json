@@ -64,5 +64,16 @@
         "interest": "Male",
         "username": "Tel",
         "password": "Tel1"
+    },
+    {
+        "id": 7,
+        "firstName": "Hej",
+        "lastname": "Hej",
+        "birthday": "1222-02-12",
+        "email": "Hej",
+        "gender": "Male",
+        "interest": "Male",
+        "username": "Hej",
+        "password": "Hej1"
     }
 ]
